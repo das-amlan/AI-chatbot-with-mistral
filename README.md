@@ -10,11 +10,13 @@ This project implements a chatbot using the Mistral-7B-Instruct-v0.2 model.  It 
 
 The chatbot is built upon the Mistral-7B-Instruct-v0.2, a large language model (LLM) known for its instruction-following capabilities.  Mistral models are known for their strong performance across various NLP tasks, including text generation, question answering, and translation. This specific model has been fine-tuned for instruction following, making it particularly suitable for chatbot applications.
 
+(Mistral-7B-Instruct-v0.2)[https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.2]
+
 ## Implementation Details
 
-1. **Setup and Dependencies:** The project starts by installing necessary libraries: `transformers`, `torch`, `accelerate`, `bitsandbytes`, `sentencepiece`, `gradio`, and `PyPDF2`.  It then authenticates with the Hugging Face Hub to access the pre-trained model.
+1. **Setup and Dependencies:** The project starts by installing necessary libraries: `transformers`, `torch`, `accelerate`, `bitsandbytes`, `sentencepiece`, `gradio`.  We must then authenticate with the Hugging Face Hub to access the pre-trained model.
 
-2. **Model Loading:** The `load_model` function downloads the Mistral-7B-Instruct-v0.2 model and its associated tokenizer.  Crucially, it uses 4-bit quantization (`load_in_4bit=True`) to reduce memory footprint and allow the model to run on consumer-grade GPUs. The `device_map="auto"` parameter allows the model to automatically determine the best device to load on.
+2. **Model Loading:** The `load_model` function downloads the Mistral-7B-Instruct-v0.2 model and its associated tokenizer.  Crucially, we use 4-bit quantization (`load_in_4bit=True`) to reduce memory footprint and allow the model to run on consumer-grade GPUs (available in Google Colab).
 
 3. **Prompt Formatting:** The `format_prompt` function takes the user's message and the chat history as input. It constructs a formatted prompt for the model. The format of the prompt is designed to provide context to the model, allowing it to maintain coherence in the conversation.
 
@@ -22,7 +24,7 @@ The chatbot is built upon the Mistral-7B-Instruct-v0.2, a large language model (
 
 5. **Chatbot Function:** The `chat_response` function ties everything together.  It takes the user's message and chat history, generates a response using the model, and clears the GPU cache to prevent memory issues.
 
-6. **Gradio Interface:** A Gradio interface provides an interactive chat experience. Users can type messages, and the chatbot will generate responses. Example prompts are included to help users get started. The `share=True` argument makes the Gradio app accessible via a public link.
+6. **Gradio Interface:** Gradio interface to give an interactive chat experience. You can type your messages, and the chatbot will generate responses.
 
 ## How to Run
 
@@ -35,9 +37,7 @@ The chatbot is built upon the Mistral-7B-Instruct-v0.2, a large language model (
     cd [your project directory]
     ```
 3.  **Install dependencies:**
-    ```bash
-    pip install -r requirements.txt 
-    ```
+
 4.  **Log in to Hugging Face:**
     Run the script. The script will prompt you to log in to HuggingFace hub.
 5.  **Run the application:**
