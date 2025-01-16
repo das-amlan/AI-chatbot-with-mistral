@@ -10,7 +10,7 @@ This project implements a chatbot using the Mistral-7B-Instruct-v0.2 model.  It 
 
 The chatbot is built upon the Mistral-7B-Instruct-v0.2, a large language model (LLM) known for its instruction-following capabilities.  Mistral models are known for their strong performance across various NLP tasks, including text generation, question answering, and translation. This specific model has been fine-tuned for instruction following, making it particularly suitable for chatbot applications.
 
-(Mistral-7B-Instruct-v0.2)[https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.2]
+[Mistral-7B-Instruct-v0.2](https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.2)
 
 ## Implementation Details
 
