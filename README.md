@@ -44,4 +44,4 @@ The chatbot is built upon the Mistral-7B-Instruct-v0.2, a large language model (
     ```bash
     python your_script_name.py
     ```
-This will launch the Gradio interface in your browser. **Start the Conversation **
+This will launch the Gradio interface in your browser. **Start the Conversation**
