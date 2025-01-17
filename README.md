@@ -30,11 +30,11 @@ The chatbot is built upon the Mistral-7B-Instruct-v0.2, a large language model (
 
 1.  **Clone the repository:**
     ```bash
-    git clone [your repository link]
+    git clone [repository link]
     ```
 2.  **Navigate to the project directory:**
     ```bash
-    cd [your project directory]
+    cd [project directory]
     ```
 3.  **Install dependencies:**
 
